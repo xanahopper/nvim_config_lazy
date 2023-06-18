@@ -5,6 +5,7 @@ return {
       colorscheme = "monokai",
     },
   },
+  -- Jump plugin like EasyEmotion
   {
     "phaazon/hop.nvim",
     lazy = true,
@@ -21,10 +22,12 @@ return {
       require("hop").setup()
     end,
   },
+  -- Custom monikai theme
   {
     "tanvirtin/monokai.nvim",
     lazy = false,
   },
+  -- neo-tree Nerd Font v3 icon patch
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
@@ -65,6 +68,19 @@ return {
             { source = "filesystem", display_name = " 󰉓 Files " },
             { source = "git_status", display_name = " 󰊢 Git " },
           },
+        },
+      },
+    },
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = {
+      window = {
+        completion = {
+          border = "rounded",
+        },
+        documentation = {
+          border = "rounded",
         },
       },
     },
