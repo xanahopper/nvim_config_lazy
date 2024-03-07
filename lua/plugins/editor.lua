@@ -7,9 +7,10 @@ return {
   },
   -- Jump plugin like EasyEmotion
   {
-    "phaazon/hop.nvim",
+    "smoka7/hop.nvim",
     lazy = true,
-    branch = "v2",
+    vscode = true,
+    version = "*",
     keys = {
       { "<leader>jj", "<cmd>HopWordAC<CR>", desc = "[Hop] Jump after cursor" },
       { "<leader>kk", "<cmd>HopWordBC<CR>", desc = "[Hop] Jump before cursor" },
@@ -27,6 +28,7 @@ return {
     "tanvirtin/monokai.nvim",
     lazy = false,
   },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false },
   -- neo-tree Nerd Font v3 icon patch
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -38,8 +40,17 @@ return {
         },
         git_status = {
           symbols = {
-            renamed = "󰁕",
+            -- Change type
+            added = "", -- or "✚", but this is redundant info if you use git_status_colors on the name
+            modified = "", -- or "", but this is redundant info if you use git_status_colors on the name
+            deleted = "✖", -- this can only be used in the git_status source
+            renamed = "󰁕", -- this can only be used in the git_status source
+            -- Status type
+            untracked = "",
+            ignored = "",
             unstaged = "󰄱",
+            staged = "",
+            conflict = "",
           },
         },
         document_symbols = {
