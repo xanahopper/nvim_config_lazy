@@ -29,23 +29,6 @@ return {
     end,
   },
   {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {},
-      inlay_hints = {
-        enabled = true,
-      },
-      tools = {
-        autoSetHints = true,
-        hover_with_actions = true,
-        inlay_hints = {
-          show_parameter_hints = true,
-          auto = true,
-        },
-      },
-    },
-  },
-  {
     "folke/neoconf.nvim",
     opts = {
       import = {
